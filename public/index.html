@@ -2,26 +2,36 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Node.js</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="login-container">
 
-<h2>Iniciar Sesión</h2>
+    <h2>Iniciar Sesión</h2>
 
-<input type="text" id="usuario" placeholder="Usuario">
+    <form id="loginForm">
 
-<input type="password" id="password" placeholder="Contraseña">
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+        </div>
 
-<button onclick="login()">Ingresar</button>
+        <div class="input-group">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="********" required>
+        </div>
 
-<p id="mensaje"></p>
+        <button type="submit">Ingresar</button>
+
+        <p id="mensaje"></p>
+
+    </form>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

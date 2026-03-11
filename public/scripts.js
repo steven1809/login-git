@@ -1,15 +1,24 @@
-function login(){
+document.getElementById("loginForm").addEventListener("submit", async function(e){
+    e.preventDefault();
 
-let usuario = document.getElementById("usuario").value;
-let password = document.getElementById("password").value;
-let mensaje = document.getElementById("mensaje");
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const mensaje = document.getElementById("mensaje");
 
-if(usuario === "admin" && password === "1234"){
-mensaje.style.color = "green";
-mensaje.innerHTML = "Login correcto";
-}else{
-mensaje.style.color = "red";
-mensaje.innerHTML = "Usuario o contraseña incorrectos";
-}
+    // Enviar datos al servidor
+    const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+    });
 
-}
+    const data = await response.json();
+
+    if(data.success){
+        mensaje.style.color = "green";
+        mensaje.textContent = data.mensaje;
+    } else {
+        mensaje.style.color = "red";
+        mensaje.textContent = data.mensaje;
+    }
+});
