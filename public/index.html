@@ -3,35 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Node.js</title>
+<title>Landing Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="login-container">
+<div class="landing-container">
 
-    <h2>Iniciar Sesión</h2>
+    <header>
+        <h1>Bienvenido a Mi Aplicación</h1>
+        <p>La mejor plataforma para gestionar tu proyecto.</p>
+    </header>
 
-    <form id="loginForm">
-
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" id="email" placeholder="correo@ejemplo.com" required>
-        </div>
-
-        <div class="input-group">
-            <label>Contraseña</label>
-            <input type="password" id="password" placeholder="********" required>
-        </div>
-
-        <button type="submit">Ingresar</button>
-
-        <p id="mensaje"></p>
-
-    </form>
+    <div class="landing-buttons">
+        <a href="login.html" class="btn">Iniciar Sesión</a>
+        <a href="#" class="btn secondary">Registrarse</a>
+    </div>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>

@@ -1,67 +1,109 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+/* Reset básico */
+*{margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif;}
 
+/* Body */
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#667eea,#764ba2);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#667eea,#764ba2);
 }
 
+/* Landing Page */
+.landing-container{
+    background:white;
+    padding:50px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.landing-container h1{
+    font-size:2em;
+    margin-bottom:10px;
+}
+
+.landing-container p{
+    font-size:1em;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.landing-buttons .btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:5px;
+    background:#667eea;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.landing-buttons .btn:hover{
+    background:#5563d6;
+}
+
+.landing-buttons .secondary{
+    background:#ccc;
+    color:#333;
+}
+
+.landing-buttons .secondary:hover{
+    background:#bbb;
+}
+
+/* Login Page */
 .login-container{
-background:white;
-padding:40px;
-border-radius:10px;
-width:350px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    width:350px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .login-container h2{
-text-align:center;
-margin-bottom:25px;
+    text-align:center;
+    margin-bottom:25px;
 }
 
 .input-group{
-margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .input-group label{
-display:block;
-margin-bottom:5px;
-font-size:14px;
+    display:block;
+    margin-bottom:5px;
+    font-size:14px;
 }
 
 .input-group input{
-width:100%;
-padding:10px;
-border:1px solid #ccc;
-border-radius:5px;
-font-size:14px;
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
 }
 
 button{
-width:100%;
-padding:12px;
-border:none;
-background:#667eea;
-color:white;
-font-size:16px;
-border-radius:5px;
-cursor:pointer;
-transition:0.3s;
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#667eea;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-background:#5563d6;
+    background:#5563d6;
 }
 
 #mensaje{
-margin-top:15px;
-text-align:center;
-font-weight:bold;
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
 }
